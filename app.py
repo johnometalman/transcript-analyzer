@@ -95,14 +95,15 @@ def analyze_transcript(transcript, language):
 # App title and description
 st.title("📟 Meeting Insight")
 st.divider()
-st.markdown("""**Analyze your call transcripts from Zoom, Meet, Teams, etc to extract:**
+st.markdown(""" ##### **Analyze your call transcripts from Zoom, Meet, Teams, etc to extract:**
 - Key discussion topics with timestamps
 - Assigned tasks and responsible persons
 - Important decisions and action items
 - Mentioned tools and platforms 
 """)
-
-st.image(".streamlit/example.png",width=700 ,  caption="if you have a transcript like this... proceess it freely")
+st.divider()
+st.markdown("""  ***if you have a transcript like this... proceess it freely***""")
+st.image(".streamlit/example.png",width=700)
 st.divider()
 
 # Language selection
