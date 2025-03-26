@@ -6,7 +6,7 @@ from pathlib import Path
 # Set page config
 st.set_page_config(
     page_title="Transcript Analyzer",
-    page_icon="📝",
+    page_icon="☎️",
     layout="centered"
 )
 
