@@ -66,7 +66,7 @@ def analyze_transcript(transcript, language):
         return None
 
 # App title and description
-st.title("📝 Transcript Analyzer")
+st.title("☎️ Transcript Analyzer")
 st.markdown("""**Analyze your call transcripts to extract:**
 - Key discussion topics with timestamps
 - Assigned tasks and responsible persons
@@ -78,7 +78,7 @@ st.divider()
 # Language selection
 language = st.selectbox(
     "Select output language",
-    ("English", "Spanish"),
+    ("English", "Spanish", "Italian", "French", "German"),
     index=0
 )
 
