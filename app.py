@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from openai import OpenAI
 from pathlib import Path
+import streamlit.components.v1 as components
 
 # Set page config
 st.set_page_config(
@@ -9,6 +10,19 @@ st.set_page_config(
     page_icon="📟",
     layout="centered"
 )
+
+# Inject Google Analytics script
+ga_script = """
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNG1TBVYGP"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-QNG1TBVYGP');
+    </script>
+"""
 
 # Inject Clarity script
 clarity_script = """
@@ -21,21 +35,11 @@ clarity_script = """
     </script>
 """
 
-google_analytics = """
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNG1TBVYGP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+# Combine scripts
+full_script = f"{ga_script} {clarity_script}"
 
-  gtag('config', 'G-QNG1TBVYGP');
-</script>
-"""
-
-st.html(clarity_script)
-st.html(google_analytics) 
-
+# Inject both scripts into Streamlit
+components.html(full_script, height=0)
 
 # Initialize OpenAI client
 client = OpenAI(
