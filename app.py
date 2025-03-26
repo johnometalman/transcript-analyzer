@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Set page config
 st.set_page_config(
-    page_title="Transcript Analyzer",
+    page_title="Call Insight",
     page_icon="☎️",
     layout="centered"
 )
@@ -66,7 +66,7 @@ def analyze_transcript(transcript, language):
         return None
 
 # App title and description
-st.title("☎️ Transcript Analyzer")
+st.title("☎️ Call Insight")
 st.markdown("""**Analyze your call transcripts to extract:**
 - Key discussion topics with timestamps
 - Assigned tasks and responsible persons
