@@ -21,7 +21,20 @@ clarity_script = """
     </script>
 """
 
-st.html(clarity_script)  # Inject script
+google_analytics = """
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNG1TBVYGP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QNG1TBVYGP');
+</script>
+"""
+
+st.html(clarity_script)
+st.html(google_analytics) 
 
 
 # Initialize OpenAI client
