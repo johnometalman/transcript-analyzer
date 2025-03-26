@@ -102,7 +102,7 @@ st.markdown(""" ##### **Analyze your call transcripts from Zoom, Meet, Teams, et
 - Mentioned tools and platforms 
 """)
 st.divider()
-st.markdown("""  ***if you have a transcript like this... proceess it freely***""")
+st.markdown("""  ***if you have a transcript like this... process it freely***""")
 st.image(".streamlit/example.png",width=700)
 st.divider()
 
